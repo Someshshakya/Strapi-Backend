@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "name": "Article",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 50,
+      "minLength": 5
+    },
+    "content": {
+      "type": "text",
+      "required": true,
+      "unique": true,
+      "maxLength": 100
+    },
+    "ratting": {
+      "type": "integer",
+      "max": 10,
+      "min": 1
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "articles",
+      "dominant": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    }
+  }
+}
