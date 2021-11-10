@@ -118,3 +118,4 @@ build
 # text file
 ############################
 udemy_overview.txt
+./config/database.js
