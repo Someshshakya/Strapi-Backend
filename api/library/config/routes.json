@@ -10,8 +10,16 @@
     },
     {
       "method": "POST",
-      "path": "/libraries/sing_up",
+      "path": "/libraries/sign_up",
       "handler": "library.sign_up",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/libraries/login",
+      "handler": "library.login",
       "config": {
         "policies": []
       }

@@ -9,7 +9,7 @@ const { parseMultipartData, sanitizeEntity } = require("strapi-utils");
 
 module.exports = {
   /**
-   * Create a record.
+   * Sign up and store a record.
    *
    * @return {Object}
    */
@@ -24,4 +24,10 @@ module.exports = {
     }
     return sanitizeEntity(entity, { model: strapi.models.library });
   },
+  /**
+   * Login and create a jwt
+   *
+   * @return {Object}
+   */
+  async login(ctx) {},
 };
